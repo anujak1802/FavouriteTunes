@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ song.title }} - {{ song.artist }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h1, p {
+            color: #007bff;
+        }
+        a {
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: none;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="container mt-5">
+        
+        <h4>{{ song.title }}</h4>
+        <p class="mb-4">Artist: {{ song.artist }}</p>
+        <a href="{% url 'song_list' %}" class="btn btn-primary">Back to Song List</a>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container mt-5">
+    <h4>Artist Song Count</h4>
+    <ul class="list-group">
+      {% for artist in artists %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          {{ artist.name }}
+          <span class="badge badge-primary badge-pill">{{ artist.song_set.count }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
